@@ -35,7 +35,7 @@ candidates 中的数字可以无限制重复被选取。
 
 # 思路(C++)
 
-DFS， 类似于[17. Letter Combinations of a Phone Number](Medium/17.%20Letter%20Combinations%20of%20a%20Phone%20Number) ，但是此处节点元素储存`cur_target`，边信息为			`cur_candidates` 中的每个元素。其中，每个节点的`cur_target` 等于`last_target-cur_candidates[i]`，`cur_candidates = last_candidates(begin()+i,···,end())` （原始candidates已增序排列）。 当`cur_target==0` 时，递归结束并添加此路径。 
+DFS， 类似于[17. Letter Combinations of a Phone Number](../17.%20Letter%20Combinations%20of%20a%20Phone%20Number) ，但是此处节点元素储存`cur_target`，边信息为			`cur_candidates` 中的每个元素。其中，每个节点的`cur_target` 等于`last_target-cur_candidates[i]`，`cur_candidates = last_candidates(begin()+i,···,end())` （原始candidates已增序排列）。 当`cur_target==0` 时，递归结束并添加此路径。 
 
 ## Python
 

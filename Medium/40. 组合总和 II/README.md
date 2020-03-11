@@ -34,7 +34,7 @@ candidates 中的每个数字在每个组合中只能使用一次。
 
 # 思路(C++)
 
-[39. 组合总和](Medium/39.%20组合总和/) 的扩展，但由于条件的约束，有几点需考虑。
+[39. 组合总和](../39.%20组合总和) 的扩展，但由于条件的约束，有几点需考虑。
 
 由于每个数字在每个组合中只能使用一次，所以递归的`next_candidates` 由`cur_candidates(begin()+i,···,end())` 变为`cur_candidates(begin()+i+1,···,end())`，由此带来一个问题，即当`i == cur_candidates.size()-1` 时，`next_candidates is empty` 所以此时要停止递归，及时return。
 
